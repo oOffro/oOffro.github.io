@@ -102,7 +102,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="笔记," />
+  <meta name="keywords" content="笔记,微信," />
 
 
 
@@ -120,15 +120,18 @@
 
 
 
-<meta name="keywords" content="笔记">
+<meta name="description" content="在学习微信公众号中一些值得注意的点。微信公众平台技术文档">
+<meta name="keywords" content="笔记,微信">
 <meta property="og:type" content="article">
-<meta property="og:title" content="学习笔记">
+<meta property="og:title" content="微信公众号学习笔记">
 <meta property="og:url" content="http://yoursite.com/2017/07/30/学习笔记/index.html">
 <meta property="og:site_name" content="奔跑的蜗牛">
+<meta property="og:description" content="在学习微信公众号中一些值得注意的点。微信公众平台技术文档">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-07-30T07:37:14.176Z">
+<meta property="og:updated_time" content="2017-07-30T18:29:16.449Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学习笔记">
+<meta name="twitter:title" content="微信公众号学习笔记">
+<meta name="twitter:description" content="在学习微信公众号中一些值得注意的点。微信公众平台技术文档">
 
 
 
@@ -137,7 +140,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true,"onmobile":true},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":true},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -162,7 +165,7 @@
 
 
 
-  <title>学习笔记 | 奔跑的蜗牛</title>
+  <title>微信公众号学习笔记 | 奔跑的蜗牛</title>
   
 
 
@@ -300,7 +303,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">学习笔记</h1>
+          <h1 class="post-title" itemprop="name headline">微信公众号学习笔记</h1>
         
 
         <div class="post-meta">
@@ -335,8 +338,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
+                  <a href="/categories/微信/" itemprop="url" rel="index">
+                    <span itemprop="name">微信</span>
                   </a>
                 </span>
 
@@ -369,7 +372,15 @@
       
 
       
-        
+        <p>在学习微信公众号中一些值得注意的点。<a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1445241432" target="_blank" rel="external">微信公众平台技术文档</a><br><a id="more"></a></p>
+<h2 id="开发环境搭建"><a href="#开发环境搭建" class="headerlink" title="开发环境搭建"></a>开发环境搭建</h2><h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><p>微信服务器转发请求给用户服务器，就需要接入认证。首先需要将本地服务器映射到外网。需要使用映射软件。<br><br>常见的映射软件有:<a href="http://hsk.oray.com/" target="_blank" rel="external">花生壳</a>，<a href="http://www.nat123.com/" target="_blank" rel="external">nat123</a>。<br>这里采用的是花生壳</p>
+<h3 id="配置外网映射"><a href="#配置外网映射" class="headerlink" title="配置外网映射"></a>配置外网映射</h3><p>配置十分简单，注意内网与外网的端口，均选择80</p>
+<h3 id="测试号接入"><a href="#测试号接入" class="headerlink" title="测试号接入"></a>测试号接入</h3><p>采用密文认证的方式<br></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Controller</span></div><div class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/index"</span>)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IndexController</span> </span>&#123;</div><div class="line">	<span class="meta">@RequestMapping</span>(method = RequestMethod.GET)</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">signature</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">	<span class="comment">// response.getWriter().println("weixin");</span></div><div class="line">        <span class="comment">// 接收4个参数</span></div><div class="line">		String token = <span class="string">"weixin"</span>;</div><div class="line">		String signature = request.getParameter(<span class="string">"signature"</span>);</div><div class="line">		String timestamp = request.getParamete(<span class="string">"timestamp"</span>);</div><div class="line">		String nonce = request.getParameter(<span class="string">"nonce"</span>);</div><div class="line">		String echostr = request.getParameter(<span class="string">"echostr"</span>);</div><div class="line">		<span class="comment">// 1）将token、timestamp、nonce三个参数进行字典(数组)序排序</span></div><div class="line">		String[] arr = &#123; token, timestamp, nonce &#125;;</div><div class="line">		<span class="comment">// 2）将三个参数字符串拼接成一个字符串进行sha1加密</span></div><div class="line">		StringBuilder sb = <span class="keyword">new</span> StringBuilder();</div><div class="line">		<span class="keyword">for</span> (String param : arr) &#123;</div><div class="line">			sb.append(param);</div><div class="line">		&#125;</div><div class="line">		String content = sb.toString();</div><div class="line">		<span class="comment">// sha1加密</span></div><div class="line">		String security = SecurityUtil.sha1(content);</div><div class="line">		<span class="comment">// 3）开发者获得加密后的字符串可与signature对比，标识该请求来源于微信</span></div><div class="line">		<span class="keyword">if</span> (security.equals(signature)) &#123;</div><div class="line">			response.getWriter().println(echostr);</div><div class="line">		&#125; <span class="keyword">else</span> &#123;</div><div class="line">			<span class="comment">// 认证失败</span></div><div class="line">			<span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"认证失败!"</span>);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><br><br>微信公众号测试号接口配置信息<br>URL：为外网映射的地址+Controller中的映射地址。如：<a href="http://offieo.6655.la/index" target="_blank" rel="external">http://offieo.6655.la/index</a><br>Token：自己填写，这里是“weixin”</p>
+<p>注意点：<br>1 明文模式，是直接回传Token的值，但是在密文模式，需要根据认证的结果保存参数来作为加解密的依据。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">response.getWriter().println(Token);</div></pre></td></tr></table></figure></p>
+<p>2 如果改变了地址，需要重新认证。<br>3 认证地址必须以http开头，并且端口是80 </p>
+
       
     </div>
 
@@ -399,6 +410,8 @@
         <div class="post-tags">
           
             <a href="/tags/笔记/" rel="tag"># 笔记</a>
+          
+            <a href="/tags/微信/" rel="tag"># 微信</a>
           
         </div>
       
@@ -469,8 +482,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -496,7 +518,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -507,7 +529,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -560,6 +582,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#开发环境搭建"><span class="nav-number">1.</span> <span class="nav-text">开发环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#引入"><span class="nav-number">1.1.</span> <span class="nav-text">引入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置外网映射"><span class="nav-number">1.2.</span> <span class="nav-text">配置外网映射</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试号接入"><span class="nav-number">1.3.</span> <span class="nav-text">测试号接入</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -603,8 +641,6 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
-        
-          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
