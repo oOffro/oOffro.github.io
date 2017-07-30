@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-29T16:04:46.504Z</updated>
+  <updated>2017-07-30T07:37:14.176Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,12 +20,16 @@
     <link href="http://yoursite.com/2017/07/30/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2017/07/30/学习笔记/</id>
     <published>2017-07-29T16:04:46.000Z</published>
-    <updated>2017-07-29T16:04:46.504Z</updated>
+    <updated>2017-07-30T07:37:14.176Z</updated>
     
     <summary type="html">
     
     </summary>
     
+      <category term="笔记" scheme="http://yoursite.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
