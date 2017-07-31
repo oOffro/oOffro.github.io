@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-30T18:29:16.449Z</updated>
+  <updated>2017-07-31T01:18:07.951Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,13 +16,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>微信公众号学习笔记</title>
+    <title>微信公众号学习笔记(二)</title>
+    <link href="http://yoursite.com/2017/07/31/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%BA%8C)/"/>
+    <id>http://yoursite.com/2017/07/31/微信公众号学习笔记(二)/</id>
+    <published>2017-07-31T01:10:41.000Z</published>
+    <updated>2017-07-31T01:18:07.951Z</updated>
+    
+    <content type="html"><![CDATA[<p>在学习微信公众号中一些值得注意的点。<a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1445241432" target="_blank" rel="external">微信公众平台技术文档</a><br><strong>自定义菜单</strong><br><a id="more"></a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在学习微信公众号中一些值得注意的点。&lt;a href=&quot;https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;amp;id=mp1445241432&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;微信公众平台技术文档&lt;/a&gt;&lt;br&gt;&lt;strong&gt;自定义菜单&lt;/strong&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="微信" scheme="http://yoursite.com/categories/%E5%BE%AE%E4%BF%A1/"/>
+    
+    
+      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="微信" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信公众号学习笔记(一)</title>
     <link href="http://yoursite.com/2017/07/30/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2017/07/30/学习笔记/</id>
     <published>2017-07-29T16:04:46.000Z</published>
-    <updated>2017-07-30T18:29:16.449Z</updated>
+    <updated>2017-07-31T01:14:40.723Z</updated>
     
-    <content type="html"><![CDATA[<p>在学习微信公众号中一些值得注意的点。<a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1445241432" target="_blank" rel="external">微信公众平台技术文档</a><br><a id="more"></a></p>
+    <content type="html"><![CDATA[<p>在学习微信公众号中一些值得注意的点。<a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1445241432" target="_blank" rel="external">微信公众平台技术文档</a><br><strong>环境搭建与普通消息的自动回复</strong><br><a id="more"></a></p>
 <h2 id="开发环境搭建"><a href="#开发环境搭建" class="headerlink" title="开发环境搭建"></a>开发环境搭建</h2><h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><p>微信服务器转发请求给用户服务器，就需要接入认证。首先需要将本地服务器映射到外网。需要使用映射软件。<br><br>常见的映射软件有:<a href="http://hsk.oray.com/" target="_blank" rel="external">花生壳</a>，<a href="http://www.nat123.com/" target="_blank" rel="external">nat123</a>。<br>这里采用的是花生壳</p>
 <h3 id="配置外网映射"><a href="#配置外网映射" class="headerlink" title="配置外网映射"></a>配置外网映射</h3><p>配置十分简单，注意内网与外网的端口，均选择80</p>
 <h3 id="测试号接入"><a href="#测试号接入" class="headerlink" title="测试号接入"></a>测试号接入</h3><p>采用密文认证的方式<br></p>
@@ -34,7 +59,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;在学习微信公众号中一些值得注意的点。&lt;a href=&quot;https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;amp;id=mp1445241432&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;微信公众平台技术文档&lt;/a&gt;&lt;br&gt;
+      &lt;p&gt;在学习微信公众号中一些值得注意的点。&lt;a href=&quot;https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;amp;id=mp1445241432&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;微信公众平台技术文档&lt;/a&gt;&lt;br&gt;&lt;strong&gt;环境搭建与普通消息的自动回复&lt;/strong&gt;&lt;br&gt;
     
     </summary>
     
@@ -52,7 +77,7 @@
     <link href="http://yoursite.com/2017/07/29/hello-world/"/>
     <id>http://yoursite.com/2017/07/29/hello-world/</id>
     <published>2017-07-29T08:10:20.126Z</published>
-    <updated>2017-07-29T17:56:55.455Z</updated>
+    <updated>2017-07-30T17:48:06.186Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br><a id="more"></a></p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
